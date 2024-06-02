@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <link rel="stylesheet" href="fff.css">
+<head>
+    <title>موقع بيع المنتجات</title>
+    <style>
+        /* CSS */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #f4f4f4;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        @media (min-width:950px) and (max-width:1150px) {
+    .content .image img{
+        width: 330px;
+    }
+}
+@media(max-width:950px){
+    .content, nav{
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+.content .image, .content .text{
+    width: 80%;
+}
+body::after{
+    clip-path: circle(50% at bottom);
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SALE</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Homepage </a> </a></li>
+            <li><a href="#"> products </a></li>
+            <li><a href="#">offers</a></li>
+            <li><a href="#"> call us </a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <h2>PRODUCTS</h2>
+        <div id="products">
+            <div class="product">
+                <img src="p1.jpg" alt="Product 1">
+                <h3>shopping cart</h3>
+                <p>Price: $10</p>
+                <button class="buy-btn"> buy it now </button>
+            </div>
+            <div class="product">
+                <img src="p2.jpg" alt="Product 2">
+                <h3>wristwatch</h3>
+                <p>Price: $15</p>
+                <button class="buy-btn">buy it now </button>
+            </div>
+            <div class="product">
+                <img src="m.jpg" alt="Product 2">
+                <h3>transpair</h3>
+                <p>Price: $105</p>
+                <button class="buy-btn">buy it now </button>
+            </div>
+            
+        </div>
+    </section>
+
+    <footer>
+        <p>Copyrights  &copy; 2023</p>
+    </footer>
+
+    <script>
+        // JavaScript
+        const buyButtons = document.querySelectorAll('.buy-btn');
+        buyButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                alert('Thank you for your purchase!');
+            });
+        });
+    </script>
+</body>
+</html>

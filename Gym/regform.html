@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  *{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    direction: ltr;
+  }
+body {
+  background-image: url(images/8.jpj.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll;
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
+
+
+/* Add padding to containers */
+.container {
+  width: 600px;
+  height: 350px;
+  margin: 13% auto;
+  position: relative;
+  border-radius: 10px;
+
+}
+form{
+  width: 80%;
+  color:black;
+  font-weight: bold;
+  font-size: 20px;
+  position: absolute;
+  border-radius: 20px;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+  background-color: RosyBrown;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  width: 200px;
+  height: 50px;
+  background-color: #f1f1f1;
+  text-align: right;
+  
+}
+.alr{
+  display: flex;
+  text-align: right;
+  
+  
+}
+</style>
+</head>
+<body>
+
+<form action="regform.php" method="post">
+  <div class="container">
+    <h1 style="color: aqua;">Register</h1>
+    <p style="color: aqua;">Please fill in this form to create an account.</p>
+    <hr>
+
+    <label for="name" style="color: aqua;"><b>name</b></label>
+    <input type="text" name="name" placeholder="Enter Name" required>
+    <label for="email" style="color: aqua;"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+ 
+    
+    <label for="psw" style="color: aqua;"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <label for="psw-repeat" style="color: aqua;"><b>Repeat Password</b></label>
+    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+    <hr>
+    <p style="color: aqua;">By creating an<br> account you agree to our<br> <a href="#">Terms & Privacy</a>.</p>
+
+    <button type="submit" name="submit" class="registerbtn" style="color: aqua;">Register</button>
+  </div>
+  
+  <div class="container signin">
+    <p class="alr">Already have an account? <a href="login.html">Sign in</a>.</p>
+  </div>
+</form>
+
+</body>
+</html>
