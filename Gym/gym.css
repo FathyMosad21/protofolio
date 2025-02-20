@@ -532,62 +532,131 @@ section{
     color: var(--main-color);
 }
 
-
-
-@media (max-width:991px){
-    html{
-        font-size: 55%;
-    }
-    .header{
-        padding: 2rem;
-    }
-    .header .active{
-        padding: 2rem;
-    }
-    section{
-        padding: 2rem;
-    }
-}
-
-@media (max-width:768px){
-    #menu-btn{
+@media (max-width: 768px) {
+    #menu-btn {
         display: inline-block;
     }
-    .header .navbar{
-        position: absolute;
-        top:100px;
-        right: 0;
-        left: 0;
-        background: rgb(0, 0, 0, .9);
-        border-top: .1rem solid #eee;
-        clip-path: polygon(0 0,100% 0 ,100% 0, 0,0);
-    }
-    .header .navbar .active{
-        clip-path: polygon(0 0, 100% 0 , 100% 100%, 0 100%);
-    }
-    .header .navbar a{
-        display: block;
-        margin: 2rem;
-        font-size: 2rem;
-    }
-    .feature .feature-slider .box .content h3{
-        padding: 1rem;
-    }
-    .testimoial .box-container {
-        padding: 1rem 0;
 
+    .header .navbar {
+        position: fixed;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.9);
+        padding: 2rem;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        transition: 0.3s linear;
     }
-    .testimoial .box-container .box{
-        margin-top: 6rem;
+
+    .header .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        top: 100%;
+    }
+
+    .header .navbar a {
+        display: block;
+        margin: 2rem 0;
+        text-align: center;
+        font-size: 2rem;
+        color: #fff;
+    }
+
+    .header .navbar a:hover {
+        color: var(--min-color);
     }
 }
-@media (max-width:450px){
-    html{
-        font-size: 55%;
+/* تعديل نقاط الكسر للشاشات */
+@media (max-width: 768px) {
+    html {
+        font-size: 50%; /* تعديل من 30% إلى 50% لتحسين القراءة */
     }
-    .header .icons a{
-        letter-spacing: none;
-        font-size: 1.3rem;
+    
+    .header .navbar {
+        position: fixed; /* تعديل من unset إلى fixed */
+        top: 100%; /* تحسين موقع القائمة */
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.9);
+        display: none; /* إضافة خاصية العرض */
+    }
+    
+    .header .navbar.active {
+        display: block;
+    }
+    
+    .blogs .blogs-slider .box .image img {
+        padding-left: 0; /* إزالة التباعد الثابت */
+        width: 100%; /* جعل الصورة تتناسب مع العرض */
+    }
+}
+
+/* إضافة نقطة كسر جديدة للأجهزة المتوسطة */
+@media (max-width: 992px) {
+    .schedule .box-container {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    
+    .trainers .trainer-solider .box .image img {
+        width: 70%; /* تحسين عرض صور المدربين */
+    }
+}
+/* تحسين تنسيق الصور */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.feature .feature-slider .box .image img,
+.trainers .trainer-solider .box .image img,
+.blogs .blogs-slider .box .image img {
+    width: 100%;
+    object-fit: cover;
+}
+.header {
+    padding: 1.5rem 5%; /* تعديل التباعد ليكون نسبي */
+}
+
+.header .navbar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+@media (max-width: 768px) {
+    .header .navbar {
+        flex-direction: column;
+        padding: 2rem;
+    }
+    
+    .header .navbar a {
+        display: block;
+        width: 100%;
+        text-align: center;
         padding: 1rem;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
     }
 }
+/* تحسين أحجام النصوص */
+:root {
+    --heading-size: clamp(2.5rem, 5vw, 4rem);
+    --text-size: clamp(1.4rem, 2vw, 1.7rem);
+}
+
+.heading {
+    font-size: var(--heading-size);
+}
+
+p, .text {
+    font-size: var(--text-size);
+}
+section {
+    padding: 2rem 5%; /* استخدام نسب مئوية بدلاً من القيم الثابتة */
+}
+
+.box-container {
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+
+
