@@ -45,6 +45,36 @@ html {
         transform: translateY(0);
     }
 }
+@media (max-width: 768px) {
+    .about-content {
+        padding: 25px;
+    }
+
+    .about-text p {
+        font-size: 1em;
+    }
+
+    .about .title {
+        font-size: 1.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-content {
+        padding: 20px;
+    }
+
+    .about-text p {
+        font-size: 0.95em;
+    }
+
+    .download-cv-btn {
+        width: 100%;
+        text-align: center;
+        padding: 12px;
+        font-size: 1em;
+    }
+}
 
 .card:hover {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
@@ -147,7 +177,7 @@ section {
 }
 .about {
     background-color: #f9f9f9;
-    padding: 100px 200px;
+    padding: 80px 20px;
 }
 
 .about .title {
@@ -174,6 +204,7 @@ section {
     color: #333;
     margin-bottom: 20px;
 }
+
 
 .social-icons a {
     color: white;
