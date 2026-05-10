@@ -13,6 +13,26 @@
 html {
     animation: fadeInBody 1s ease;
 }
+/* تنسيق عام لحاوية اللوجوهات */
+.devops-logos-container {
+    display: flex;
+    justify-content: center; /* توسيع اللوجوهات في المنتصف */
+    align-items: center;
+    gap: 30px; /* المسافة بين كل لوجو والتاني */
+    padding: 20px;
+    flex-wrap: wrap; /* عشان ينزلوا سطر جديد لو الشاشة صغيرة */
+}
+
+/* تنسيق موحد لكل SVG */
+.devops-logo {
+    width: 60px; /* تحكم في حجم اللوجو من هنا */
+    height: auto;
+    transition: transform 0.3s ease; /* تأثير حركة بسيط عند الوقوف بالماوس */
+}
+
+.devops-logo:hover {
+    transform: scale(1.1); /* تكبير بسيط عند الهوفر */
+}
 
 @keyframes fadeInBody {
     from { opacity: 0; }
