@@ -13,25 +13,48 @@
 html {
     animation: fadeInBody 1s ease;
 }
-/* تنسيق عام لحاوية اللوجوهات */
-.devops-logos-container {
+/* Container to match your image layout */
+.services-container {
     display: flex;
-    justify-content: center; /* توسيع اللوجوهات في المنتصف */
-    align-items: center;
-    gap: 30px; /* المسافة بين كل لوجو والتاني */
+    justify-content: center;
+    gap: 20px;
     padding: 20px;
-    flex-wrap: wrap; /* عشان ينزلوا سطر جديد لو الشاشة صغيرة */
 }
 
-/* تنسيق موحد لكل SVG */
-.devops-logo {
-    width: 60px; /* تحكم في حجم اللوجو من هنا */
+/* The card style based on your image */
+.service-card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* Shadow like your image */
+    padding: 40px 20px;
+    text-align: center;
+    width: 320px;
+    transition: 0.3s;
+}
+
+/* Grid for the small logos inside the card */
+.logos-grid {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.devops-icon {
+    width: 35px;
     height: auto;
-    transition: transform 0.3s ease; /* تأثير حركة بسيط عند الوقوف بالماوس */
 }
 
-.devops-logo:hover {
-    transform: scale(1.1); /* تكبير بسيط عند الهوفر */
+.service-card h3 {
+    color: #446eff; /* Match your blue color */
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+.service-card p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
 }
 
 @keyframes fadeInBody {
