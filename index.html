@@ -4,202 +4,379 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-    
-    <!-- AOS Animation Library -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    
-    <!-- Your Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <title>Fathy Mosad — DevOps & Full-Stack Engineer</title>
     <link rel="stylesheet" href="proto.css" />
-
-    <title>My Website</title>
 </head>
 <body>
-
-    <header>
-        <a href="#" class="logo">Fathy</a>
-        <nav class="navigation">
-            <a href="#services">Services</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
-
-    <section class="main">
-        <div>
-            <h2>Hello, I'm Fathy <br><span>Systems & Operations Engineer | Aspiring DevOps | Full Stack Developer </span></h2>
-            <h3>I build scalable web applications and manage secure Cloud</h3>
-            <a href="#projects" class="main-btn">View my work</a>
-            <div class="social-icons">
-                <a href="https://www.linkedin.com/in/fathy-mosad"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/FathyMosad21"><i class="fab fa-github"></i></a>
-                <a href="https://www.facebook.com/Fathy.Mos3d"><i class="fab fa-facebook"></i></a>
-                <a href="https://instagram.com/fathy_alkarmoty"><i class="fab fa-instagram"></i></a>
-                <a href="https://wh.ms/201022013687"><i class="fab fa-whatsapp"></i></a>
-            </div>
+ 
+<header>
+    <a href="#" class="logo">FM<span>.dev</span></a>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+ 
+<!-- ── HERO ── -->
+<section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+ 
+    <div class="hero-content">
+        <div class="hero-badge">
+            Available for opportunities
         </div>
-    </section>
-    <section class="about" id="about">
-    <h2 class="title" data-aos="fade-up">About Me</h2>
-    <div class="about-content" data-aos="fade-right">
-        <div class="about-text">
-            <p>
-                I'm a passionate Web Developer with strong experience in both frontend and backend development.
-                I specialize in building responsive, user-friendly websites using technologies like HTML, CSS, JavaScript, PHP, and MySQL.
-                I love solving real-world problems and constantly learning new tools and frameworks.
-            </p>
-            <p>
-                In addition to coding, I'm also experienced in website management, design, and creating digital content. I enjoy working in teams and turning ideas into reality through clean, efficient code.
-            </p>
+        <h1>Hi, I'm <span class="name">Fathy Mosad</span><br>DevOps & Full-Stack Engineer</h1>
+        <p class="hero-sub">
+            Building <strong>scalable infrastructure</strong> and <strong>modern web applications</strong>.<br>
+            Bridging development and operations for reliable, automated systems.
+        </p>
+        <div class="hero-btns">
+            <a href="#projects" class="btn-primary"><i class="fas fa-folder-open"></i> View My Work</a>
+            <a href="Fathy-Mosad-Fathy.pdf" download class="btn-outline"><i class="fas fa-file-download"></i> Download CV</a>
+        </div>
+        <div class="hero-socials">
+            <a href="https://www.linkedin.com/in/fathy-mosad" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/FathyMosad21" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://wh.ms/201022013687" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="mailto:fathymosad99@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+    </div>
+ 
+    <!-- Floating Terminal -->
+    <div class="hero-terminal">
+        <div class="terminal-bar">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+            <span class="terminal-title">fathy@devops-box ~ zsh</span>
+        </div>
+        <div class="terminal-body">
+            <div class="t-line"><span class="t-prompt">❯</span><span class="t-cmd">terraform plan</span></div>
+            <div class="t-out ok">✔ Plan: 4 to add, 0 to change, 0 to destroy.</div>
+            <div class="t-line"><span class="t-prompt">❯</span><span class="t-cmd">kubectl get pods</span></div>
+            <div class="t-out ok">✔ All pods running (3/3)</div>
+            <div class="t-line"><span class="t-prompt">❯</span><span class="t-cmd">docker ps</span></div>
+            <div class="t-out info">● api-service   UP 2 hours</div>
+            <div class="t-out info">● frontend      UP 2 hours</div>
+            <div class="t-line"><span class="t-prompt">❯</span><span class="t-cmd">ansible-playbook deploy.yml</span></div>
+            <div class="t-out ok">✔ PLAY RECAP: ok=12 changed=3</div>
+            <div class="t-line"><span class="t-prompt">❯</span><span class="t-cmd">_</span></div>
         </div>
     </div>
 </section>
-
-
-    <section class="cards" id="services">
-        <h2 class="title" data-aos="fade-up">Services</h2>
-        <div class="content">
-          <div class="services-container">
-    <div class="service-card">
-        <div class="logos-grid">
-            <svg class="devops-icon" viewBox="0 0 100 60"><path fill="#232F3E" d="M38.8 30.6c.1-1.2.6-2.1 1.6-2.8 1-.7 2.3-1 3.9-1s2.9.3 3.9 1c1 .7 1.5 1.6 1.6 2.8H38.8zm11 8.2c-.2.8-.6 1.5-1.2 2.1s-1.4 1-2.4 1.3c-1 .3-2.1.4-3.3.4-1.8 0-3.3-.3-4.5-.9s-2.1-1.3-2.7-2.3c-.6-.9-.9-2-.9-3.3 0-1.8.6-3.1 1.7-4s2.8-1.4 5-1.4h6.4v-.9c0-1.2-.3-2.1-.9-2.7s-1.6-.9-2.9-.9c-1 0-1.9.2-2.6.5s-1.2.9-1.5 1.7h-7.1c.3-1.8 1.1-3.2 2.6-4.2s3.5-1.6 6-1.6c1.9 0 3.5.3 4.8.8s2.3 1.2 3 2.1c.7.9 1 2 1 3.4v13.3c0 .8.1 1.6.3 2.2H38l-.2-1.9zm17.9-15.8h7l3.6 14.6 3.8-14.6h6.8l3.7 14.6 3.6-14.6h7l-6 22h-7.1l-3.8-14.3-3.8 14.3h-7l-6-22zm31 6.5c1.4-.7 2.4-1.8 3.1-3.1s1-2.8 1-4.4c0-2-.6-3.7-1.7-5.1s-2.7-2-4.8-2h-9v22h7.3c2 0 3.7-.6 4.9-1.9s1.8-3 1.8-5c0-1.5-.4-2.8-1-3.8s-1.4-1.8-2.6-2.4zm-4.7-6.5h-1.6v-3.7h1.6c.7 0 1.1.2 1.4.5s.5.7.5 1.3-.2.9-.5 1.3c-.3.3-.8.6-1.4.6zm1.1 8.2c-.3.4-.8.6-1.4.6h-2.1v-4.1h2.1c.6 0 1.1.2 1.4.6s.4.8.4 1.4c0 .7-.1 1.1-.4 1.5zM12.9 2.5c4 0 7.8 2 10.6 5.2 2.8 3.2 4.3 7.5 4.3 12s-1.5 8.8-4.3 12c-2.8 3.2-6.6 5.2-10.6 5.2S5.1 34.9 2.3 31.7c-2.8-3.2-4.3-7.5-4.3-12s1.5-8.8 4.3-12C5.1 4.5 8.9 2.5 12.9 2.5z"/><path fill="#FF9900" d="M12.9 5.8c-2.9 0-5.7 1.4-7.8 3.8-2.1 2.4-3.2 5.6-3.2 9s1.1 6.6 3.2 9c2.1 2.4 4.9 3.8 7.8 3.8s5.7-1.4 7.8-3.8c2.1-2.4 3.2-5.6 3.2-9s-1.1-6.6-3.2-9c-2.1-2.4-4.9-3.8-7.8-3.8z"/></svg>
-            <svg class="devops-icon" viewBox="0 0 100 100"><path fill="#844FBA" d="M11 6h34v34H11V6zm0 38h34v34H11V44zM49 6h40v34H49V6zm0 38h40v34H49V44zm0 38h40v16H49V82z"/></svg>
-            <svg class="devops-icon" viewBox="0 0 100 100"><path fill="#2496ED" d="M16 33.7V22c2-1.3 4.3-2 6.7-2H39v13.7H16zm0 18.3V38.3c2.3-1.3 4.7-2 7.3-2H39v13.7H16zM43 33.7V22c2.3-1.3 4.7-2 7.3-2h16v13.7H43zm0 18.3V38.3c2.3-1.3 4.7-2 7.3-2h16v13.7H43zM43 70.3V56h16c2.3 0 4.7.7 7.3 2V70.3H43zM63 70.3V56h16c2.3 0 4.7.7 7.3 2V70.3H63zm33.3-14c-1.3 0-2.3-1-3.3-1-1-.3-2-.7-2.7-1.3s-1.3-1.3-1.7-2-1-1.3-1.3-2.3c-.3-.7-.7-1.3-1.3-1.7s-1-.7-1.7-1c-1.3-.7-3-.7-4.3-.7H12.7c-2 0-3.7.7-5 2s-2 3-2 5v41.3c0 2 .7 3.7 2 5s3 2 5 2h83.3c2 0 3.7-.7 5-2s2-3 2-5V60.3c0-2-.7-3.7-2-5-1.3-.7-3-1-5-1.3h-.3zm-11 25.7H12.7c-.7 0-1.3-.3-1.7-.7s-.7-1-.7-1.7v-4.7c0-.7.3-1.3.7-1.7s1-.7 1.7-.7h72.7c.7 0 1.3.3 1.7.7s.7 1 .7 1.7v4.7c0 .7-.3 1.3-.7 1.7s-1 .7-1.7.7z"/></svg>
-        </div>
-        <h3>DevOps & Cloud</h3>
-        <p>Managing AWS infrastructure and automating workflows with Terraform & Docker.</p>
+ 
+<!-- ── ABOUT ── -->
+<section class="about" id="about">
+    <div class="reveal">
+        <p class="section-label">// about me</p>
+        <h2 class="section-title">Who I <span>Am</span></h2>
     </div>
-</div>
-            <div class="card" data-aos="fade-right">
-                <div class="icon"><i class="fas fa-laptop"></i></div>
-                <div class="info">
-                    <h3>Writing Code</h3>
-                    <p>Writing clean code and solving web problems</p>
-                </div>
+    <div class="about-grid">
+        <div class="about-text reveal">
+            <p>
+                I'm a <strong>Computer Science graduate (2025)</strong> from Modern University for Technology & Information,
+                specializing in <strong>DevOps, Cloud Infrastructure, and Full-Stack Development</strong>.
+            </p>
+            <p>
+                I combine a developer's logic with a system administrator's mindset — building scalable web applications using
+                <strong>ASP.NET Core, C#, and React.js</strong>, while automating infrastructure with
+                <strong>AWS, Terraform, Docker, and Kubernetes</strong>.
+            </p>
+            <p>
+                Currently working as a <strong>Technical Operations & Systems Coordinator</strong> at Foxes Technology,
+                managing API integrations, real-time incident response, and system health monitoring.
+                Passionate about bridging the gap between Dev and Ops to deliver reliable, automated systems.
+            </p>
+        </div>
+        <div class="about-stats reveal reveal-delay-1">
+            <div class="stat-box">
+                <div class="stat-num">2025</div>
+                <div class="stat-label">CS Graduate</div>
             </div>
-            <div class="card" data-aos="fade-up">
-                <div class="icon"><i class="fas fa-laptop-code"></i></div>
-                <div class="info">
-                    <h3>Backend Developer</h3>
-                    <p>Writing jQuery, MySQL, and PHP backend logic</p>
-                </div>
+            <div class="stat-box">
+                <div class="stat-num">5+</div>
+                <div class="stat-label">Projects Shipped</div>
             </div>
-            <div class="card" data-aos="fade-left">
-                <div class="icon"><i class="fas fa-code"></i></div>
-                <div class="info">
-                    <h3>Frontend Developer</h3>
-                    <p>Creating responsive websites using HTML, CSS, and JavaScript</p>
-                </div>
+            <div class="stat-box">
+                <div class="stat-num">3+</div>
+                <div class="stat-label">Certifications</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-num">100%</div>
+                <div class="stat-label">Uptime Goal</div>
             </div>
         </div>
-    </section>
-
-    <section class="projects" id="projects">
-        <h2 class="title" data-aos="fade-up">Projects</h2>
-        <div class="content">
-            <div class="project-card" data-aos="zoom-in">
-    <div class="project-image">
-        <img src="image/Capture7.PNG" alt="BCI Project" />
     </div>
-    <div class="project-info">
-        <p class="project-category">Brain-Computer Interface</p>
-        <strong class="project-title">
-            <span>BCI System</span>
-            <a href="https://fathymosad21.github.io/BCI/index.html" class="more-details" target="_blank">More details</a>
-        </strong>
+</section>
+ 
+<!-- ── SKILLS ── -->
+<section class="skills" id="skills">
+    <div class="reveal">
+        <p class="section-label">// tech stack</p>
+        <h2 class="section-title">Skills & <span>Tools</span></h2>
+        <p class="section-sub">From infrastructure automation to full-stack development — end-to-end ownership.</p>
     </div>
-</div>
- <div class="project-card" data-aos="zoom-in">
-                <div class="project-image"><img src="image/Capture 2.PNG" alt="Project 5"></div>
-                <div class="project-info">
-                    <p class="project-category">Bug-Free Code</p>
-                    <strong class="project-title">
-                        <span>Gym Website</span>
-                        <a href="Gym-main/index.html" class="more-details">More details</a>
-                    </strong>
-                </div>
+    <div class="skills-grid">
+        <div class="skill-card reveal">
+            <div class="skill-icon-row">
+                <span class="tech-badge badge-aws">☁ AWS</span>
+                <span class="tech-badge badge-terraform">⬡ Terraform</span>
+                <span class="tech-badge badge-ansible">⚙ Ansible</span>
             </div>
-            
-<div class="project-card" data-aos="zoom-in">
-                <div class="project-image"><img src="image/Capture5.PNG" alt="Project 4"></div>
-                <div class="project-info">
-                    <p class="project-category">Multiple Pages</p>
-                    <strong class="project-title">
-                        <span>CRUD System</span>
-                        <a href="crud/index.html" class="more-details">More details</a>
-                    </strong>
-                </div>
-            </div>            
-            
-            <div class="project-card" data-aos="zoom-in">
-                <div class="project-image"><img src="image/Capture3.PNG" alt="Project 1"></div>
-                <div class="project-info">
-                    <p class="project-category">Coding & Web Design</p>
-                    <strong class="project-title">
-                        <span>Website for iPhone</span>
-                        <a href="phone/index.html" class="more-details">More details</a>
-                    </strong>
-                </div>
-            </div>
-
-
-            <div class="project-card" data-aos="zoom-in">
-                <div class="project-image"><img src="image/Capture4.PNG" alt="Project 2"></div>
-                <div class="project-info">
-                    <p class="project-category">HTML & CSS</p>
-                    <strong class="project-title">
-                        <span>Nike Page</span>
-                        <a href="market/index.html" class="more-details">More details</a>
-                    </strong>
-                </div>
-            </div>
-
+            <h3>Cloud & IaC</h3>
+            <p>Provisioning and managing AWS infrastructure (EC2, VPC, S3) with Terraform and Ansible for configuration management.</p>
         </div>
-    </section>
-
-    <section class="cards contact" id="contact">
-        <h2 class="title" data-aos="fade-up">Let's work together</h2>
-        <div class="content">
-            <div class="card" data-aos="fade-right">
-                <div class="icon"><i class="fas fa-phone"></i></div>
-                <div class="info">
-                    <h3>Phone</h3>
-                    <p>+20 102 201 3687</p>
-                </div>
+        <div class="skill-card reveal reveal-delay-1">
+            <div class="skill-icon-row">
+                <span class="tech-badge badge-docker">🐳 Docker</span>
+                <span class="tech-badge badge-k8s">⎈ Kubernetes</span>
             </div>
-            <div class="card" data-aos="fade-left">
-                <div class="icon"><i class="fas fa-envelope"></i></div>
-                <div class="info">
-                    <h3>Email</h3>
-                    <p>fathymosad99@gmail.com</p>
-                </div>
+            <h3>Containers & Orchestration</h3>
+            <p>Building and managing microservices with Docker, orchestrating production clusters with Kubernetes.</p>
+        </div>
+        <div class="skill-card reveal reveal-delay-2">
+            <div class="skill-icon-row">
+                <span class="tech-badge badge-jenkins">● Jenkins</span>
+                <span class="tech-badge badge-github">⬡ GitHub Actions</span>
+            </div>
+            <h3>CI/CD & Automation</h3>
+            <p>Building automated pipelines using Jenkins and GitHub Actions to streamline delivery and deployment.</p>
+        </div>
+        <div class="skill-card reveal">
+            <div class="skill-icon-row">
+                <span class="tech-badge badge-prometheus">▲ Prometheus</span>
+                <span class="tech-badge badge-grafana">◈ Grafana</span>
+            </div>
+            <h3>Monitoring & GitOps</h3>
+            <p>Implementing system monitoring and alerting with Prometheus & Grafana, deployments via ArgoCD.</p>
+        </div>
+        <div class="skill-card reveal reveal-delay-1">
+            <div class="skill-icon-row">
+                <span class="tech-badge badge-dotnet">⬡ ASP.NET</span>
+                <span class="tech-badge badge-csharp">C# C#</span>
+                <span class="tech-badge badge-net">SQL Server</span>
+            </div>
+            <h3>Backend Development</h3>
+            <p>Building robust REST APIs and backend architectures with ASP.NET Core, C#, OOP, MVC, and SQL Server.</p>
+        </div>
+        <div class="skill-card reveal reveal-delay-2">
+            <div class="skill-icon-row">
+                <span class="tech-badge badge-react">⚛ React.js</span>
+                <span class="tech-badge badge-js">JS JavaScript</span>
+                <span class="tech-badge badge-php">PHP</span>
+            </div>
+            <h3>Frontend Development</h3>
+            <p>Creating responsive, performant UIs with React.js, JavaScript, HTML/CSS, Bootstrap, and Angular.</p>
+        </div>
+        <div class="skill-card reveal">
+            <div class="skill-icon-row">
+                <span class="tech-badge badge-linux">🐧 Linux</span>
+                <span class="tech-badge badge-net">Windows Server</span>
+            </div>
+            <h3>Systems & Networking</h3>
+            <p>Linux admin (Ubuntu/CentOS), TCP/IP, DNS, DHCP, LAN/WAN troubleshooting, Active Directory basics.</p>
+        </div>
+        <div class="skill-card reveal reveal-delay-1">
+            <div class="skill-icon-row">
+                <span class="tech-badge badge-github">API Integration</span>
+                <span class="tech-badge badge-ansible">Incident Mgmt</span>
+            </div>
+            <h3>Operations & Support</h3>
+            <p>API integrations (Viator, GetYourGuide), incident management, ticketing systems, and Level-2 escalation coordination.</p>
+        </div>
+    </div>
+</section>
+ 
+<!-- ── EXPERIENCE ── -->
+<section class="experience" id="experience">
+    <div class="reveal">
+        <p class="section-label">// work history</p>
+        <h2 class="section-title">Professional <span>Experience</span></h2>
+        <p class="section-sub">Real-world impact across operations, development, and cloud infrastructure.</p>
+    </div>
+    <div class="timeline">
+        <div class="tl-item reveal">
+            <div class="tl-date">Dec 2024 – Present</div>
+            <div class="tl-role">Technical Operations & Systems Coordinator</div>
+            <div class="tl-company">Foxes Technology · New Cairo</div>
+            <ul>
+                <li>Manage and monitor system health and API integrations to ensure 100% operational uptime.</li>
+                <li>Handle real-time technical incidents and provide immediate troubleshooting for system errors.</li>
+                <li>Document technical issues and coordinate with Level-2 teams for complex escalations.</li>
+            </ul>
+        </div>
+        <div class="tl-item reveal reveal-delay-1">
+            <div class="tl-date">Part-time · 6 Months</div>
+            <div class="tl-role">Full-Stack Web Developer</div>
+            <div class="tl-company">3Tech · Heliopolis, Cairo</div>
+            <ul>
+                <li>Developed and optimized responsive web interfaces using React.js integrated with backend services.</li>
+                <li>Provided technical support during deployment and testing phases of the SDLC.</li>
+            </ul>
+        </div>
+        <div class="tl-item reveal reveal-delay-2">
+            <div class="tl-date">2 Months Intensive</div>
+            <div class="tl-role">Backend .NET Development Trainee</div>
+            <div class="tl-company">ITI – Information Technology Institute</div>
+            <ul>
+                <li>Built robust backend architectures using ASP.NET Core.</li>
+                <li>Developed RESTful APIs and managed relational databases with SQL Server, focusing on clean code and performance.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+ 
+<!-- ── PROJECTS ── -->
+<section class="projects" id="projects">
+    <div class="reveal">
+        <p class="section-label">// portfolio</p>
+        <h2 class="section-title">Featured <span>Projects</span></h2>
+        <p class="section-sub">A selection of projects across frontend, backend, and research.</p>
+    </div>
+    <div class="projects-grid">
+        <div class="project-card reveal">
+            <img src="image/Capture7.PNG" alt="BCI Project" class="project-img" />
+            <div class="project-body">
+                <p class="project-tag">Graduation Project · Research</p>
+                <h3>Brain-Computer Interface (BCI/P300)</h3>
+                <p>Frontend for a BCI system using P300 signals to control user interaction. Responsible for responsive UI and real-time brain signal display.</p>
+                <a href="https://fathymosad21.github.io/BCI/index.html" target="_blank" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
             </div>
         </div>
-    </section>
-<a href="Fathy-Mosad-Fathy.pdf" class="download-cv-btn" download target="_blank" data-aos="fade-up">
-    <i class="fas fa-file-download"></i> Download My CV (PDF)
-</a>
-
-    <footer class="footer">
-        <p class="footer-title">Programmer @ <span>Fathy Mosad</span></p>
-        <div class="social-icons">
-            <a href="https://www.linkedin.com/in/fathy-mosad"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/FathyMosad21"><i class="fab fa-github"></i></a>
-            <a href="https://www.facebook.com/Fathy.Mos3d"><i class="fab fa-facebook"></i></a>
-            <a href="https://instagram.com/fathy_alkarmoty"><i class="fab fa-instagram"></i></a>
-            <a href="https://wh.ms/201022013687"><i class="fab fa-whatsapp"></i></a>
+        <div class="project-card reveal reveal-delay-1">
+            <img src="image/Capture5.PNG" alt="CRUD App" class="project-img" />
+            <div class="project-body">
+                <p class="project-tag">Frontend · JavaScript</p>
+                <h3>CRUD Task Manager</h3>
+                <p>A multi-page task management app built with vanilla JavaScript — covers full create, read, update, and delete operations with local persistence.</p>
+                <a href="https://fathymosad21.github.io/crud/" target="_blank" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+            </div>
         </div>
-    </footer>
-
-    <!-- AOS JS -->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init({
-        duration: 1000,
-        once: true
-      });
-    </script>
+        <div class="project-card reveal reveal-delay-2">
+            <img src="image/Capture 2.PNG" alt="Gym Website" class="project-img" />
+            <div class="project-body">
+                <p class="project-tag">Frontend · Animation</p>
+                <h3>Fitness Landing Page</h3>
+                <p>Animated fitness landing page with interactive sections, CSS transitions, and a performance-focused responsive layout.</p>
+                <a href="https://fathymosad21.github.io/Gym/" target="_blank" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+        <div class="project-card reveal">
+            <img src="image/Capture3.PNG" alt="iPhone Website" class="project-img" />
+            <div class="project-body">
+                <p class="project-tag">Frontend · Web Design</p>
+                <h3>iPhone Product Page Clone</h3>
+                <p>Pixel-accurate product page clone showcasing advanced CSS layout, grid design, and responsive techniques.</p>
+                <a href="phone/index.html" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+        <div class="project-card reveal reveal-delay-1">
+            <img src="image/Capture4.PNG" alt="Nike Page" class="project-img" />
+            <div class="project-body">
+                <p class="project-tag">Frontend · HTML & CSS</p>
+                <h3>Nike Landing Page</h3>
+                <p>A clean, brand-aligned Nike marketing page with custom typography, hero sections, and animated product highlights.</p>
+                <a href="market/index.html" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+ 
+<!-- ── CERTIFICATIONS ── -->
+<section class="certs" id="certs">
+    <div class="reveal">
+        <p class="section-label">// credentials</p>
+        <h2 class="section-title">Certifications & <span>Training</span></h2>
+        <p class="section-sub">Continuous learning across cloud, DevOps, and full-stack development.</p>
+    </div>
+    <div class="certs-grid">
+        <div class="cert-card reveal">
+            <div class="cert-icon"><i class="fas fa-cloud"></i></div>
+            <div class="cert-info">
+                <h4>DevOps Professional Training</h4>
+                <p>Route Academy · AWS, Terraform, Docker, Kubernetes, Jenkins, GitHub Actions, Ansible, Prometheus, Grafana, ArgoCD</p>
+                <span class="cert-status status-progress">In Progress · Est. July 2026</span>
+            </div>
+        </div>
+        <div class="cert-card reveal reveal-delay-1">
+            <div class="cert-icon"><i class="fas fa-layer-group"></i></div>
+            <div class="cert-info">
+                <h4>Full Stack Web Development</h4>
+                <p>Raya Academy · HTML, CSS, JS, Bootstrap, React, Angular, PHP, Node.js, MySQL</p>
+                <span class="cert-status status-done">Completed</span>
+            </div>
+        </div>
+        <div class="cert-card reveal reveal-delay-2">
+            <div class="cert-icon"><i class="fas fa-server"></i></div>
+            <div class="cert-info">
+                <h4>ASP.NET Core Web Development</h4>
+                <p>Middleware · ASP.NET Core, C#, OOP, AJAX, JSON, MVC, SQL Server</p>
+                <span class="cert-status status-done">Completed</span>
+            </div>
+        </div>
+    </div>
+</section>
+ 
+<!-- ── CONTACT ── -->
+<section class="contact" id="contact">
+    <div class="contact-wrap reveal">
+        <p class="section-label" style="text-align:center">// get in touch</p>
+        <h2 class="section-title" style="justify-content:center">Let's Work <span>Together</span></h2>
+        <p class="section-sub" style="margin:0 auto 0">Open to DevOps, cloud, and full-stack roles. Let's build something great.</p>
+        <div class="contact-cards">
+            <a href="tel:+201022013687" class="contact-card">
+                <i class="fas fa-phone"></i>
+                <div><strong>+20 102 201 3687</strong><p>Phone / WhatsApp</p></div>
+            </a>
+            <a href="mailto:fathymosad99@gmail.com" class="contact-card">
+                <i class="fas fa-envelope"></i>
+                <div><strong>fathymosad99@gmail.com</strong><p>Email</p></div>
+            </a>
+        </div>
+        <a href="Fathy-Mosad-Fathy.pdf" download class="btn-primary" style="margin-top:10px">
+            <i class="fas fa-file-download"></i> Download My CV
+        </a>
+    </div>
+</section>
+ 
+<!-- ── FOOTER ── -->
+<footer>
+    <div class="footer-logo">Fathy Mosad <span>// DevOps & Full-Stack Engineer</span></div>
+    <div class="footer-socials">
+        <a href="https://www.linkedin.com/in/fathy-mosad" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/FathyMosad21" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.facebook.com/Fathy.Mos3d" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com/fathy_alkarmoty" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://wh.ms/201022013687" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
+</footer>
+ 
+<script>
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(el => {
+            if (el.isIntersecting) {
+                el.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.1 });
+ 
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+ 
+    // Header scroll effect
+    window.addEventListener('scroll', () => {
+        const header = document.querySelector('header');
+        header.style.background = window.scrollY > 50
+            ? 'rgba(6,10,18,0.95)'
+            : 'rgba(6,10,18,0.8)';
+    });
+</script>
+ 
 </body>
 </html>
