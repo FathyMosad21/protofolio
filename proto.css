@@ -752,7 +752,8 @@
         }
  
         @media (max-width: 600px) {
-            nav { display: none; }
+            nav { display: flex; gap: 8px; flex-wrap: wrap; }
+             nav a { padding-left: 0; font-size: 0.75em; }
             .hero h1 { font-size: 2em; }
             .hero-btns { flex-direction: column; }
             .about-stats { grid-template-columns: 1fr 1fr; }
